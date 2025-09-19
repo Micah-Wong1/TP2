@@ -1,14 +1,21 @@
+"""
+Nom = Micah
+Gr = 406
+Ce code , pour que l'usager devine
+"""
 import random
 
 jeu = True
 
-nbr_aleatoire = random.randint(0, 10)
+borne_min = int(input("Entrez la borne minimale du jeu:"))
+borne_max = int(input("Entrez la borne maximale du jeu:"))
 
+nbr_aleatoire = random.randint(borne_min, borne_max)
+nbr_essais = 0
 
-print("J’ai choisi un nombre au hasard entre 0 et 1000, A vous de le deviner...")
+print(f"J’ai choisi un nombre au hasard entre {borne_min} et {borne_max}, A vous de le deviner...")
 print("Entrez votre essai :")
 
-nbr_essais = 0
 while jeu:
     rep = int(input())
 
@@ -18,7 +25,12 @@ while jeu:
         print(f"Vous avez reussi en {nbr_essais} essais")
         ans = str(input("Voulez-vous rejouer? (y/n)"))
         if ans == "y":
-            print("ok, entrez votre essai:")
+            borne_min = int(input("Entrez la borne minimale du jeu:"))
+            borne_max = int(input("Entrez la borne maximale du jeu:"))
+            print(f"J’ai choisi un autre nombre au hasard entre {borne_min} et {borne_max}, A vous de le deviner...")
+            print("Entrez votre essai:")
+            nbr_aleatoire = random.randint(borne_min, borne_max)
+            nbr_essais = 0
 
         elif ans == "n":
             print("merci et aurevoir")
