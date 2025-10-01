@@ -12,7 +12,7 @@ borne_min = 0
 borne_max = 100
 
 
-def bornes():
+def bornes(x, y):
     global borne_min
     global borne_max
     reply = str(input("Voulez-vous choisir la difficulte?(y/n)"))
@@ -23,11 +23,13 @@ def bornes():
         print("Entrez votre essai :")
 
     elif reply == "n":
+        borne_min = x
+        borne_max = y
         print(f"J’ai choisi un nombre au hasard entre {borne_min} et {borne_max}, A vous de le deviner...")
         print("Entrez votre essai :")
 
 
-bornes()
+bornes(0, 100)
 nbr_aleatoire = random.randint(borne_min, borne_max)
 nbr_essais = 0
 
