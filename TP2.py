@@ -33,27 +33,27 @@ nbr_essais = 0
 
 
 while jeu:
-    rep = int(input())
+    reponse = int(input())
 
     nbr_essais += 1
-    if rep == nbr_aleatoire:
+    if reponse == nbr_aleatoire:
         print("Bravo! Bonne reponse!")
         print(f"Vous avez reussi en {nbr_essais} essais")
-        ans = str(input("Voulez-vous rejouer? (y/n)"))
+        answer = str(input("Voulez-vous rejouer? (y/n)"))
 
-        if ans == "y":
+        if answer == "y":
             bornes()
             nbr_aleatoire = random.randint(borne_min, borne_max)
             nbr_essais = 0
 
-        elif ans == "n":
+        elif answer == "n":
             print("merci et aurevoir")
             jeu = False
 
-    elif rep > nbr_aleatoire:
-        print(f"Mauvais reponse, le nombre est plus petit que {rep}")
+    elif reponse > nbr_aleatoire:
+        print(f"Mauvais reponse, le nombre est plus petit que {reponse}")
         print("Entrez une autre essai")
 
-    elif rep < nbr_aleatoire:
-        print(f"Mauvais reponse, le nombre est plus grand que {rep}")
+    elif reponse < nbr_aleatoire:
+        print(f"Mauvais reponse, le nombre est plus grand que {reponse}")
         print("Entrez une autre essai")
