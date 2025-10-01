@@ -1,8 +1,8 @@
 """
 Nom = Micah
 Gr = 406
-Ce code est un jeu de devinette, il choisit un nombre par hasard entre les deux nombres choisis
-par l'utilisateur, que l'utilisateur doit ensuite deviner
+Ce code est un jeu de devinette, il choisit un nombre par hasard entre les deux nombres (choisis
+par l'utilisateur ou non), que l'utilisateur doit ensuite deviner
 """
 import random
 
