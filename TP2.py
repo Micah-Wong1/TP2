@@ -40,6 +40,7 @@ while jeu:
         print("Bravo! Bonne reponse!")
         print(f"Vous avez reussi en {nbr_essais} essais")
         ans = str(input("Voulez-vous rejouer? (y/n)"))
+
         if ans == "y":
             bornes()
             nbr_aleatoire = random.randint(borne_min, borne_max)
