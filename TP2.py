@@ -14,11 +14,17 @@ borne_max = 100
 
 def bornes():
     global borne_min
-    borne_min = int(input("Entrez la borne minimale du jeu:"))
     global borne_max
-    borne_max = int(input("Entrez la borne maximale du jeu:"))
-    print(f"J’ai choisi un nombre au hasard entre {borne_min} et {borne_max}, A vous de le deviner...")
-    print("Entrez votre essai :")
+    reply = str(input("Voulez-vous choisir la difficulte?(y/n)"))
+    if reply == "y":
+        borne_min = int(input("Entrez la borne minimale du jeu:"))
+        borne_max = int(input("Entrez la borne maximale du jeu:"))
+        print(f"J’ai choisi un nombre au hasard entre {borne_min} et {borne_max}, A vous de le deviner...")
+        print("Entrez votre essai :")
+
+    elif reply == "n":
+        print(f"J’ai choisi un nombre au hasard entre {borne_min} et {borne_max}, A vous de le deviner...")
+        print("Entrez votre essai :")
 
 
 bornes()
